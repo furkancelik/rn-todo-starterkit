@@ -20,17 +20,6 @@ module.exports = StyleSheet.create({
         flexDirection: 'column',
         backgroundColor: '#ffffff',
         width:width
-
-          // marginTop:65,
-          // flex: 1,
-          // borderWidth:2,
-          // borderColor:"red",
-          // flexDirection: 'column',
-          // justifyContent: 'center',
-          //
-          // // padding: 10,
-          // backgroundColor: '#ffffff',
-          // width:width
       },
       buttonText: {
              fontSize: 18,

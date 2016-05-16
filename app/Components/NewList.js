@@ -16,7 +16,6 @@ var t = require('tcomb-form-native');
 var Form = t.form.Form;
 
 const styles = require('../style.js');
-var Main = require('./Main.js');
 
 
 var TodoList = t.struct({txt: t.String, complete: t.Bool});
@@ -46,7 +45,7 @@ class NewList extends Component {
       var txt = value.txt;
       var complete = value.complete;
       this.props.create({txt:txt,complete:complete});
-      Alert.alert( 'Liste Oluşturuldu', null,[{text: 'OK', onPress: () => this.props.navigator.pop()  }] );
+      Alert.alert( 'Liste Oluşturuldu', null,[{text: 'Tamam', onPress: () => this.props.navigator.pop()  }] );
     }
 
   }

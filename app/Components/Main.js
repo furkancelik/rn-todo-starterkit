@@ -31,7 +31,6 @@ class Main extends Component {
         };
         this.createList = this.createList.bind(this);
         this.updateList = this.updateList.bind(this);
-        // this.openListDetail = this.openListDetail.bind(this);
     }
 
     openNewList(rowData, rowID) {
@@ -56,13 +55,11 @@ class Main extends Component {
    updateList(item,id,frm){
       var items = this.state.items;
       var value = frm;//this.refs.form.getValue();
-      console.log(frm)
       if(value){
         var txt = value.txt;
         var complete = value.complete;
         var i = 0;
         items.forEach((_item,index)=>{
-          console.log(_item,_item.id,id);
           if(_item.id==item.id){
             items[index].txt = txt;
             items[index].complete = complete;
@@ -95,8 +92,6 @@ class Main extends Component {
      items.forEach((_item,_index)=>{
        if(_item.id==id){
          index = _index;
-        //  items[index].txt = txt;
-        //  items[index].complete = complete;
         }
      });
      items.splice(index, 1);
@@ -104,21 +99,8 @@ class Main extends Component {
      Alert.alert( 'Liste Silindi', null,[{text: 'Tamam', onPress: () => this.props.navigator.pop()  }] );
    }
 
-  //  renderListView(rowData,rowID){
-  //    var id = "yy";
-  //    return (
-  //      <View id={id}>
-  //        <TouchableOpacity id={id} onPress={this.openListDetail.bind(this)}>
-  //         <Text id={id} style={[styles.listView,(rowData.complete)?styles.listComplate:null]}>{rowData.txt}</Text>
-  //       </TouchableOpacity>
-  //       <View style={styles.hr}></View>
-  //     </View>
-  //     );
-  //  }
 
   render(){
-    // var ds = new ListView.DataSource({ rowHasChanged: (row1, row2) => row1 !== row2, });
-    // var items = ds.cloneWithRows(this.state.items);
     return(
       <View style={styles.container}>
       <ListItem items={this.state.items} openListDelete={this.openListDelete.bind(this)} openListDetail={this.openListDetail.bind(this)} {...this.props} />

@@ -14,29 +14,10 @@ import {
 
 const styles = require('../style.js');
 
-var NewList = require('./NewList.js');
-var ListDetail = require('./ListDetail.js');
-
-
 class ListItem extends Component {
   constructor(props) {
         super(props);
     }
-
-
-    // openListDetail(rowData, rowID){
-    //   console.log(this.props);
-    //    this.props.navigator.push({
-    //        title: 'ListDetail',
-    //        component: ListDetail,
-    //        passProps:{
-    //          item:rowData,
-    //          id:rowID,
-    //         //  update:this.updateList,
-    //
-    //        }
-    //   });
-    // }
 
    renderListView(rowData,rowID){
      return (

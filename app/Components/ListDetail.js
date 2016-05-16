@@ -15,7 +15,6 @@ var Form = t.form.Form;
 
 
 const styles = require('../style.js');
-var Main = require('./Main.js');
 
 var TodoList = t.struct({txt: t.String, complete: t.Bool});
 
